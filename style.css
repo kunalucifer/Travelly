@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 64.5%;
+}
+h1{
+    font-size: 2.6rem;
+}
+h2{
+    font-size: 4.8rem;
+}
+h3{
+    font-size: 3rem;
+    font-weight: normal;
+}
+h4,h5{
+    font-size: 2.8rem;
+}
+li, button, label, input, p{
+    font-size: 2rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+button{
+    padding: 2rem 5rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}
+button:hover{
+    background-color: #27394e;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*****************************************************************************/
+
+.main-head{
+    background: #131c27;
+    color: white;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    min-height: 10vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    flex: 1 1 40rem;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+#logo{
+    flex: 7 1 40rem;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: normal;
+}
+
+.hero{
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75) , transparent), url('/img/landing-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h3{
+    padding: 5rem;
+}
+
+/****************** PAGE 1 END HERE ******************/
+
+#locations{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) , transparent), url(/img/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.locations-head{
+    width: 90%;
+    margin: auto;
+}
+.locations-head h2{
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+.locations-head h3{
+    padding: 5rem 0rem;
+    background: linear-gradient(#131c27, #663b34);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cloud{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    pointer-events: none;
+}
+.moving-cloud-1{
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+    z-index: -1;
+}
+.moving-cloud-2{
+    top: 20%;
+    z-index: -2;
+    opacity: 0.7;
+    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+@keyframes cloudAnimation{
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(0%,0%);
+    }
+}
+
+/***************** PAGE 2 END HERE *******************/
+
+.benefits-head{
+    background: #343c34;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70vh;
+    align-items: center;
+}
+.card{
+    flex: 1 1 25vh;
+    text-align: center;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2), 0px 2rem 2rem rgba(0, 0, 0, 0.2);
+}
+.cards img{
+    height: 5rem;
+}
+.card-icon{
+    background: #131c27;
+}
+.card h4,p{
+    padding: 1rem;
+}
+
+/************* PAGE 3 ENDS HERE ************/
+
+#contact{
+    min-height: 100vh;
+    background: url(/img/contact-mountain.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forms{
+    background: rgba(19, 28, 39, 0.8);
+    width: 60%;
+    color: white;
+    border-radius: 2rem;
+}
+.form-head{
+    text-align: center;
+    padding: 4rem;
+}
+.forms label{
+    margin: 0rem 3rem;
+}
+.name-form{
+    padding: 3rem;
+    text-align: center;
+}
+.email-form{
+    padding: 3rem;
+    text-align: center;
+}
+.forms button{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #131c27;
+    color: white;
+    padding: 2rem;
+    margin: auto;
+    min-height: 10vh;
+}
+.footer ul{
+    display: flex;
+    flex: 1 1 20rem;
+    list-style: none;
+    justify-content: space-between;
+}
+.footer h5{
+    flex: 1 1 40rem;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: normal;
+}
+
+/****************** MEDIA QUERY **********************/
+
+@media screen and (max-width: 962px) {
+    nav{
+        text-align: center;
+        padding: 2rem;
+    }
+    html{
+        font-size: 45%;
+    }
+    #logo{
+        padding: 2rem;
+    }
+    .locations-head h3{
+        background: rgba(19, 28, 39, 0.8);
+        -webkit-text-fill-color: white;
+    }
+    footer{
+        text-align: center;
+    }
+    footer h5{
+        padding: 3rem;
+    }
+    .forms{
+        width: 100%;
+    }
+}
